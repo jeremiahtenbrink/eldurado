@@ -1,0 +1,21 @@
+.accounts{
+  border: 3px solid $green;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+
+  & h2, h3 {
+    color: $primaryText;
+  }
+
+  & .email {
+    color: black;
+  }
+
+  &-numbers {
+    color: $primaryText;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

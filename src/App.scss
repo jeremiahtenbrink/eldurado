@@ -1,0 +1,15 @@
+@import "assets/scss/variables";
+@import "assets/scss/accounts";
+@import "assets/scss/header";
+@import "assets/scss/leftColumn";
+@import "assets/scss/portal";
+@import "assets/scss/portalHeader";
+@import "assets/scss/subHeader";
+@import "assets/scss/actions";
+@import "assets/scss/orders";
+
+.main-body{
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+}

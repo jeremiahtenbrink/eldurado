@@ -1,0 +1,27 @@
+.orders{
+  width: 80%;
+  & &-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+  }
+
+  & .order {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+    & .name-des {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  & .bottom-text{
+    display: flex;
+    justify-content: space-between;
+    color: $secondary;
+  }
+}

@@ -1,0 +1,13 @@
+.portal{
+  padding: 10px;
+  width: 70%;
+  min-height: calc(100vh - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & .logout {
+    text-align: right;
+    color: $secondary;
+  }
+}
