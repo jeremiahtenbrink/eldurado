@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/eldurado/static/css/main.c9ab9ead.chunk.css",
+    "main.js": "/eldurado/static/js/main.6bc3eeb4.chunk.js",
+    "main.js.map": "/eldurado/static/js/main.6bc3eeb4.chunk.js.map",
+    "runtime-main.js": "/eldurado/static/js/runtime-main.948296c1.js",
+    "runtime-main.js.map": "/eldurado/static/js/runtime-main.948296c1.js.map",
+    "static/js/2.8668802b.chunk.js": "/eldurado/static/js/2.8668802b.chunk.js",
+    "static/js/2.8668802b.chunk.js.map": "/eldurado/static/js/2.8668802b.chunk.js.map",
+    "static/js/3.a7b38a55.chunk.js": "/eldurado/static/js/3.a7b38a55.chunk.js",
+    "static/js/3.a7b38a55.chunk.js.map": "/eldurado/static/js/3.a7b38a55.chunk.js.map",
+    "index.html": "/eldurado/index.html",
+    "static/css/main.c9ab9ead.chunk.css.map": "/eldurado/static/css/main.c9ab9ead.chunk.css.map",
+    "static/js/2.8668802b.chunk.js.LICENSE.txt": "/eldurado/static/js/2.8668802b.chunk.js.LICENSE.txt",
+    "static/media/Header.4a77c5c9.png": "/eldurado/static/media/Header.4a77c5c9.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.948296c1.js",
+    "static/js/2.8668802b.chunk.js",
+    "static/css/main.c9ab9ead.chunk.css",
+    "static/js/main.6bc3eeb4.chunk.js"
+  ]
+}
