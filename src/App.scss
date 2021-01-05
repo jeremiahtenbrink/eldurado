@@ -1,3 +1,6 @@
+@import "assets/scss/reset";
+@import "assets/scss/mixins";
+@import "assets/scss/main-body";
 @import "assets/scss/variables";
 @import "assets/scss/accounts";
 @import "assets/scss/header";
@@ -7,9 +10,5 @@
 @import "assets/scss/subHeader";
 @import "assets/scss/actions";
 @import "assets/scss/orders";
+@import "assets/scss/login";
 
-.main-body{
-  display: flex;
-  max-width: 1400px;
-  margin: 0 auto;
-}

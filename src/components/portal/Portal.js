@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react";
 import {Switch, Route, useHistory} from 'react-router-dom';
 import Summary from "../summary/Summary";
 import Orders from "../orders/Orders";
-import PortalHeader from "./portalHeader/PortalHeader";
-import request from 'axios';
+import PortalHeader from "./portalHeader/PortalHeader"
+import Actions from "../actions/Actions";
 
-const Portal = ({account, products, categories}) => {
+const Portal = ({account, products, categories, logout}) => {
   const [accountInfo, setAccountInfo] = useState({});
   const history = useHistory();
   
@@ -19,7 +19,7 @@ const Portal = ({account, products, categories}) => {
   }, [account]);
   
   return ( <div className='portal'>
-    <h4 className='logout'><a>Logout</a></h4>
+    <h4 onClick={logout} className='logout'><a>Logout</a></h4>
     <PortalHeader/>
     <Switch>
       <Route path={'/summary'}>
@@ -29,7 +29,7 @@ const Portal = ({account, products, categories}) => {
         <Orders products={products} categories={categories} account={account} />
       </Route>
     </Switch>
-    
+    <Actions addClass={'phone'} />
     </div> );
 };
 

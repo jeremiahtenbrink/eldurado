@@ -1,4 +1,5 @@
 import React from "react";
+import DropDown from "./dropDown";
 
 const Accounts = ({clientInformation, setActiveAccount}) => {
   
@@ -6,10 +7,10 @@ const Accounts = ({clientInformation, setActiveAccount}) => {
     <div className='accounts'>
       <h2>Welcome {clientInformation.clientName}</h2>
       <h3 className='email'>{clientInformation.email}</h3>
-      <h3>Switch Accounts</h3>
-      {clientInformation.accounts.map(account => {
-        return (<h4 onClick={() => setActiveAccount(account)} className='accounts-numbers'>{account}</h4>)
-      })}
+      { clientInformation.accounts.length > 0 &&
+        <DropDown name={ "My Accounts" } click={ setActiveAccount }
+                list={ clientInformation.accounts }/>
+      }
     </div>
   );
 };

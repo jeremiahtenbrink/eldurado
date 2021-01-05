@@ -3,24 +3,10 @@ import { useSession } from 'react-use-session';
 import Login from "../../views/Login";
 import Main from "../../views/Main";
 
-const IsLoggedIn = () => {
-  const {session, save, clear} = useSession("Eldurado");
-  const [clientInfo, setClientInfo] = useState(true);
-  
-  useEffect(() => {
-    
-    if(session){
-      setClientInfo(session);
-    }
-  }, []);
-  
-  const setLogin = (client) => {
-    setClientInfo(client);
-    save(client);
-  }
+const IsLoggedIn = ({clientInfo, logout, setLogin}) => {
   
   if(clientInfo){
-    return <Main clientInfo={clientInfo} />
+    return <Main logout={logout} clientInfo={clientInfo} />
   }else {
     return <Login setLogin={setLogin}/>
   }

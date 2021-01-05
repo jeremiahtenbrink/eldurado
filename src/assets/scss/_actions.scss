@@ -1,10 +1,44 @@
 .actions {
-  border: 3px solid $orange;
-  border-radius: 10px;
-  padding: 10px;
+  background-color: $primary;
+  border-radius: 20px;
   width: 90%;
+  color: white;
+
+  &.phone {
+    display: none;
+  }
+
+  @include breakpoint(1200px){
+    width: 50%;
+  }
+
+  @include breakpoint(phone){
+    &.desktop{
+      display: none;
+    }
+    &.phone {
+      width: 90%;
+      display: block;
+      margin-top: 50px;
+    }
+  }
+
   & h4 {
     text-decoration: underline;
     cursor: pointer;
+    margin-bottom: 15px;
   }
+
+  & .top{
+    width: 100%;
+    background-color: $secondary;
+    padding: 10px 20px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+  }
+
+  & .bottom {
+    padding: 10px 20px;
+  }
+
 }

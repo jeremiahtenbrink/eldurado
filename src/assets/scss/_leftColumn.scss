@@ -5,4 +5,12 @@
   align-items: center;
   width: 30%;
   min-height: calc(100vh - 100px);
+
+  @include breakpoint(1200px){
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: row;
+    width: 100vw;
+    min-height: 100px;
+  }
 }

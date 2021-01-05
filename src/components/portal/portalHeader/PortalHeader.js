@@ -1,20 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import SubHeader from "../subHeader/SubHeader";
+import MenuItem from "../../menuItem";
+import { useMenu } from "../../../customHooks/useMenu";
 
 const PortalHeader = () => {
+  const { accountSummary, standingOrder, nextDelivery } = useMenu();
   const menus = {
-    summary: [<li><Link to={'/summary/overview'}>Overview</Link></li>,
-              <li><Link to={'/summary/invoice'}>Invoice History</Link></li>,
-              <li><Link to={'/summary/payment'}>Payment History</Link></li>,
-              <li><Link to={'/summary/statement'}>Statement History</Link></li>,
-              <li><Link to={'/summary/payment'}>Make a Payment</Link></li> ],
-    order: [<li><Link to={'/order/overview'}>Summary</Link></li>,
-            <li><Link to={'/order/invoice'}>Print Calendar</Link></li>],
-    delivery: [],
-    faq: [],
-    settings: []
-  };
+    "Account Summary": accountSummary,
+    "Standing Order": standingOrder,
+    "Next Delivery": nextDelivery
+  }
   const location = useLocation();
   
   const [subMenu, setSubMenu] = useState(menus.summary);
@@ -24,13 +20,13 @@ const PortalHeader = () => {
     const pathname = location.pathname;
     
     if(pathname.includes('summary')){
-      setSubMenu(menus['summary']);
+      setSubMenu(menus['Account Summary']);
     }else if (pathname.includes('order')){
-      setSubMenu(menus['order']);
+      setSubMenu(menus['Standing Order']);
     }else if (pathname.includes('delivery')){
-      setSubMenu(menus['delivery']);
+      setSubMenu(menus['Next Delivery']);
     }else if (pathname.includes('faq')){
-      setSubMenu(menus['faw']);
+      setSubMenu(menus['faq']);
     }else if (pathname.includes('settings')){
       setSubMenu(menus['settins']);
     }
@@ -44,11 +40,11 @@ const PortalHeader = () => {
   return ( <div className="portal-header">
     <nav>
       <ul className={'portal-nav'}>
-        <li onClick={() => changeSubMenu('summary')}><NavLink activeClassName={'selected'} to={'/summary'} >Account Summary</NavLink></li>
-        <li onClick={() => changeSubMenu('order')}><NavLink activeClassName={'selected'} to={'/order'}>Standing Order</NavLink></li>
-        <li onClick={() => changeSubMenu('delivery')}><NavLink activeClassName={'selected'} to={'/delivery'}>Next Delivery</NavLink></li>
-        <li onClick={() => changeSubMenu('faq')}><NavLink activeClassName={'selected'} to={'/faq'}>FAQ</NavLink></li>
-        <li onClick={() => changeSubMenu('settings')}><NavLink activeClassName={'selected'} to={'/settings'}>Settings</NavLink></li>
+        <MenuItem to={'/summary/overview'} name={'Account Summary'} handleClick={changeSubMenu} />
+        <MenuItem to={'/order'} name={"Standing Order"} handleClick={changeSubMenu} />
+        <MenuItem to={'/delivery'} name={"Next Delivery"} handleClick={changeSubMenu} />
+        <MenuItem to={'/faq'} name={"FAQ"} handleClick={changeSubMenu}/>
+        <MenuItem to={'/settings'} name={"Settings"} handleClick={changeSubMenu}/>
       </ul>
       <SubHeader menu={subMenu} />
     </nav>

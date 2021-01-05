@@ -3,7 +3,7 @@ import LeftColumn from "../components/leftColumn/LeftColumn";
 import Portal from "../components/portal/Portal";
 import request from "axios";
 
-const Main = () => {
+const Main = ({logout}) => {
   
   const [clientInformation, setClientInformation] = useState({accounts: []});
   const [activeAccount, setActiveAccount] = useState(0);
@@ -50,11 +50,11 @@ const Main = () => {
     });
     setClientInformation(clientInfo)
     setActiveAccount(clientInfo.accounts[0]);
-  }, [])
+  }, []);
   
   return ( <div className='main-body'>
     <LeftColumn clientInformation={clientInformation} setActiveAccount={setActiveAccount}/>
-    <Portal products={products} categories={categories} account={activeAccount}/>
+    <Portal logout={logout} products={products} categories={categories} account={activeAccount}/>
   </div> );
 };
 

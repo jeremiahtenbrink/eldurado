@@ -1,20 +1,30 @@
 .portal {
   &-header{
+    margin: 20px 0;
     width: 100%;
     background-color: $primary;
     border-radius: 20px;
+
+    @include breakpoint(phone){
+      display: none;
+    }
+
     & nav {
       display: flex;
       flex-direction: column;
     }
+
   }
 
   &-nav {
     display: flex;
     align-items: center;
+    justify-content: center;
     height: 40px;
     margin: 0;
     & li {
+      display: flex;
+      height: 100%;
       list-style: none;
       & a {
         padding: 10px 20px;
@@ -26,7 +36,7 @@
         }
       }
       &:not(:first-child){
-        margin-left: 25px;
+        margin-left: 3%;
       }
     }
   }

@@ -1,0 +1,30 @@
+$bpDesktop: 1300px;
+$bpTablet: 1100px;
+$bpPhone: 768px;
+
+@mixin breakpoint($breakpoint) {
+  @if $breakpoint == desktop {
+    @media only screen and (max-width: $bpDesktop) {
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==tablet {
+    @media only screen and (max-width: $bpTablet){
+      @content;
+    }
+  }
+
+  @else if $breakpoint ==phone {
+    @media only screen and (max-width: $bpPhone) {
+      @content;
+    }
+  }
+
+  @else {
+    @media only screen and (max-width: $breakpoint) {
+      @content;
+    }
+  }
+
+}

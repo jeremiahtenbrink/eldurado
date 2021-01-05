@@ -1,21 +1,55 @@
 .accounts{
-  border: 3px solid $green;
+  display: flex;
+  flex-direction: column;
   padding: 20px;
   border-radius: 20px;
   width: 90%;
+  margin-bottom: 25px;
+
+  @include breakpoint(1200px){
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(phone){
+    width: 90%;
+    align-items: center;
+  }
 
   & h2, h3 {
     color: $primaryText;
+    margin-bottom: 20px;
   }
 
   & .email {
     color: black;
   }
 
-  &-numbers {
-    color: $primaryText;
-    &:hover {
-      cursor: pointer;
+  & .dropdown {
+    &-text {
+      display: flex;
+      align-items: center;
+    }
+
+    & .chevron{
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    &-items {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+
+      @include breakpoint(phone){
+        align-items: center;
+      }
+
+      & h4{
+        margin-bottom: 10px;
+        text-decoration: underline;
+      }
+
     }
   }
 }
