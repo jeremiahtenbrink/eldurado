@@ -3,7 +3,7 @@ import React from "react";
 const Order = ({order, prod}) => {
   
   return ( <div className="order">
-    <img src={prod.PROD_IMG}/>
+    <img src={prod.PROD_IMG} alt={order.PROD_TITLE}/>
     <div className="name-des">
       <h4>{prod.PROD_TITLE}</h4>
       <p>{prod.PROD_QTYDESC}</p>

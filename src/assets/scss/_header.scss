@@ -1,14 +1,21 @@
 .header {
   max-width: 100%;
-  height: $headerHeight;
+  height: calc(.2 * 100vw);
   background-size: cover;
   background-position-x: 0;
   background-position-y: 0;
   position: relative;
 
+  @include breakpoint(1100px){
+    height: 250px;
+    background-position-y: -50px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   & .hamburger {
     position: absolute;
-    top: 69px;
+    top: 20px;
     left: 50px;
     width: 30px;
     height: 25px;

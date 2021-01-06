@@ -1,11 +1,12 @@
 import React from "react";
+import {Route} from "react-router-dom";
+import Overview from "./overview";
 
 const Summary = ({account, accountInfo}) => {
-  return ( <div>
-    <h1>Account Summary</h1>
-    <h1>Account: {account}</h1>
-    <h2>Balance: {accountInfo.balance}$</h2>
-    <h2>Due: {accountInfo.dueDate}</h2>
+  return ( <div className="summary">
+    <Route path={'/summary/overview'}>
+      <Overview account={account} accountInfo={accountInfo} />
+    </Route>
     </div> );
 };
 

@@ -4,13 +4,22 @@ import DropDown from "./dropDown";
 import { useMenu } from "../../customHooks/useMenu";
 import MenuItem from "../menuItem";
 
-
+/**
+ *
+ * @param {function} logout
+ * @return {*}
+ * @constructor
+ */
 const Header = ({logout}) => {
   
   const [mobileMenuClass, setMobileMenuClass] = useState('mobile-menu');
   const [menuClass, setMenuClass] = useState('menu');
   const [subMenu, setSubMenu] = useState('');
   
+  /**
+   * @typedef {function} HandleSetSubMenu
+   * @param {string} name
+   */
   const handleSetSubMenu = (name) => {
     if(subMenu === name){
       setSubMenu('');
@@ -19,6 +28,9 @@ const Header = ({logout}) => {
     }
   }
   
+  /**
+   * @typedef {function} SetOpen
+   */
   const setOpen = () => {
     setMobileMenuClass('mobile-menu open');
     setTimeout(() => {
@@ -26,6 +38,9 @@ const Header = ({logout}) => {
     }, 50)
   }
   
+  /**
+   * @typedef {function} SetClose
+   */
   const setClose = () => {
     setMenuClass('menu');
     setTimeout(() => {

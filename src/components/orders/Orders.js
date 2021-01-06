@@ -18,7 +18,7 @@ const Orders = ({account, products, categories}) => {
       let order = orders.find(order => order.product_id === product.PROD_ID);
       if(order){
         return (
-          <Order order={order} prod={product} />
+          <Order key={product.PROD_ID} order={order} prod={product} />
         )
       }
       

@@ -4,6 +4,7 @@ import Summary from "../summary/Summary";
 import Orders from "../orders/Orders";
 import PortalHeader from "./portalHeader/PortalHeader"
 import Actions from "../actions/Actions";
+import EmergencyOrder from "../emergencyOrder";
 
 const Portal = ({account, products, categories, logout}) => {
   const [accountInfo, setAccountInfo] = useState({});
@@ -22,6 +23,9 @@ const Portal = ({account, products, categories, logout}) => {
     <h4 onClick={logout} className='logout'><a>Logout</a></h4>
     <PortalHeader/>
     <Switch>
+      <Route path={'/emergency-order'}>
+        <EmergencyOrder account={account} />
+      </Route>
       <Route path={'/summary'}>
         <Summary account={account} accountInfo={accountInfo}/>
       </Route>

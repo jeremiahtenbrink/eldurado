@@ -1,0 +1,11 @@
+.emergency-order{
+
+  & .close {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    right: 100px;
+    top: 0;
+    justify-self: flex-end;
+  }
+}

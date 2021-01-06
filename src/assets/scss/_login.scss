@@ -18,11 +18,15 @@
       width: 100%;
       justify-content: space-between;
       padding: 10px;
+
       & label {
         font-size: 25px;
       }
+
       & input {
-        border: 0;
+        border: none;
+        margin-left: 20px;
+        border-bottom: 1px solid black;
         width: 70%;
         font-size: 20px;
       }
@@ -30,6 +34,18 @@
 
     & .form-error {
       color: red;
+      font-weight: bold;
+      font-size: 20px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    & button {
+      padding: 10px;
+      background-color: $secondary;
+      border: none;
+      border-radius: 2px;
+      color: white;
       font-weight: bold;
     }
   }

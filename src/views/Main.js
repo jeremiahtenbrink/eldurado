@@ -3,6 +3,12 @@ import LeftColumn from "../components/leftColumn/LeftColumn";
 import Portal from "../components/portal/Portal";
 import request from "axios";
 
+/**
+ *
+ * @param {function} logout
+ * @return {*}
+ * @constructor
+ */
 const Main = ({logout}) => {
   
   const [clientInformation, setClientInformation] = useState({accounts: []});
@@ -34,6 +40,7 @@ const Main = ({logout}) => {
   
   useEffect(() => {
     console.log("Getting client information");
+    
     const clientInfo = {
       clientName: "30dps",
       email: "admin@30pps.com",

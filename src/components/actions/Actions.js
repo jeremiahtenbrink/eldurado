@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Actions = ({addClass}) => {
   
@@ -9,7 +10,7 @@ const Actions = ({addClass}) => {
       </div>
       <div className="bottom">
         <h4>Place an equipment work order</h4>
-        <h4>Place an emergency order</h4>
+        <h4><Link to={"/emergency-order"}>Place an emergency order</Link></h4>
         <h4>View Product listing</h4>
         <h4>Upgrade my equipment</h4>
         <h4>Contact us</h4>

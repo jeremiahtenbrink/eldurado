@@ -1,0 +1,52 @@
+form {
+  background-color: #DEDEDE;
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 80%;
+
+  & h1 {
+    width: 100%;
+  }
+
+  & .form-input {
+    & label {
+      font-size: 20px;
+      margin: 6px;
+    }
+    margin: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    & .textarea {
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+
+  & .row {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+  }
+
+  & button {
+    background-color: $secondary;
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 10px 30px;
+    max-height: 40px;
+    border-radius: 15px;
+  }
+
+  & .cancel-button {
+    cursor: pointer;
+    color: $secondary;
+    margin-left: 20px;
+  }
+
+}
