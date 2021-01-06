@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import FormInput from "../components/formInput/FormInput";
+import Form from "../components/form";
 
 const Login = ({setLogin}) => {
   
@@ -39,13 +40,13 @@ const Login = ({setLogin}) => {
   return (
     <div className="login">
       <div className="login-form">
-        <h2>Please login to continue to the portal.</h2>
-        <form>
+        <Form>
+          <h2>Please login to continue to the portal.</h2>
           <FormInput label={'Username'} inputRef={usernameRef} name={"username"} onChange={onChange} ></FormInput>
           <FormInput label={'Password'} inputRef={passwordRef} name={"password"} onChange={onChange} type={'password'} ></FormInput>
           <button type={"submit"} onClick={submit}>Login</button>
           {error && <h4 className={'form-error'}>{error}</h4>}
-        </form>
+        </Form>
       </div>
     </div> );
 };

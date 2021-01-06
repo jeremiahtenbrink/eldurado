@@ -15,6 +15,11 @@
     align-self: flex-end;
     margin-right: 5%;
     color: $secondary;
+
+    & a{
+      color: $secondary;
+    }
+
     @include breakpoint(phone){
       display: none;
     }
