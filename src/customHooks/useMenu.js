@@ -33,7 +33,13 @@ export const useMenu = (click) => {
     [<MenuItem handleClick={click} to={'/delivery/summary'} name={"Summary"} />,
       <MenuItem handleClick={click} to={'/delivery/summary'} name={"Print Calendar"} />];
   
-  return {accountSummary, standingOrder, nextDelivery}
+  /**
+   * @type {Menu}
+   */
+  const faqs = [<MenuItem handleClick={click} to={'/faq'} name={"Extinguish" +
+  " your burning questions with these refreshing answers."} ></MenuItem>]
+  
+  return {accountSummary, standingOrder, nextDelivery, faqs}
   
 }
 

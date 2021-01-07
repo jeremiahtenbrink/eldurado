@@ -1,0 +1,24 @@
+.faq {
+  margin-top: 40px;
+  width: 100%;
+
+  & .dropdown-text {
+    display: flex;
+    & .chevron {
+      margin-left: 20px;
+    }
+  }
+
+  & .dropdown-items {
+    margin-top: 20px;
+  }
+
+  & p {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+  & a {
+    color: $secondary;
+  }
+}

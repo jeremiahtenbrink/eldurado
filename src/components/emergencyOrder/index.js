@@ -38,17 +38,25 @@ const EmergencyOrder = ({account}) => {
               value={ form.details }
               label={ 'Please tell us what you need' }
             />
+            <FormInput
+              onChange={handleChange}
+              type={'email'}
+              value={form.email}
+              name={"email"}
+              label={"Email Address"}
+              style={ { width: "50%" } }
+            />
             <div className="row">
             <FormInput
-            style={ { width: "50%" } }
+            style={ { width: "60%" } }
             onChange={ handleChange }
             label={ 'Name' }
-            name={ 'Name' }
+            name={ 'name' }
             value={ form.name }
             />
             <FormInput
             onChange={ handleChange }
-            name={ 'Phone' }
+            name={ 'phone' }
             label={ "Phone" }
             value={ form.phone }
             />

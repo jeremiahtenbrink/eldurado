@@ -53,15 +53,15 @@ const Header = ({logout}) => {
   
   return ( <div className='header' style={{backgroundImage: `url(${Background})`}}>
     <div onClick={setOpen} className="hamburger">
-      <div className="line"></div>
-      <div className="line"></div>
-      <div className="line"></div>
+      <div className="mobile-line"></div>
+      <div className="mobile-line"></div>
+      <div className="mobile-line"></div>
     </div>
     <div onClick={(e) => e.preventDefault()} className={mobileMenuClass}>
       <div className={menuClass}>
         <div onClick={setClose} className="close">
-          <div className="line"></div>
-          <div className="line"></div>
+          <div className="mobile-line"></div>
+          <div className="mobile-line"></div>
         </div>
         <ul>
           <MenuItem handleClick={setClose} name={"Home"} to={"/summary/overview"} />

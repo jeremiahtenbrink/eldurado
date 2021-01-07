@@ -5,6 +5,8 @@ import Orders from "../orders/Orders";
 import PortalHeader from "./portalHeader/PortalHeader"
 import Actions from "../actions/Actions";
 import EmergencyOrder from "../emergencyOrder";
+import EquipmentWorkOrder from "../equipmentWorkOrder";
+import Faq from "../faq";
 
 const Portal = ({account, products, categories, logout}) => {
   const [accountInfo, setAccountInfo] = useState({});
@@ -26,11 +28,17 @@ const Portal = ({account, products, categories, logout}) => {
       <Route path={'/emergency-order'}>
         <EmergencyOrder account={account} />
       </Route>
+      <Route path={'/equipment-work-order'}>
+        <EquipmentWorkOrder account={account} />
+      </Route>
       <Route path={'/summary'}>
         <Summary account={account} accountInfo={accountInfo}/>
       </Route>
       <Route path={'/order'}>
         <Orders products={products} categories={categories} account={account} />
+      </Route>
+      <Route path={'/faq'}>
+        <Faq />
       </Route>
     </Switch>
     <Actions addClass={'phone'} />

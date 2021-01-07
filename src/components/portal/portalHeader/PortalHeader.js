@@ -5,11 +5,12 @@ import MenuItem from "../../menuItem";
 import { useMenu } from "../../../customHooks/useMenu";
 
 const PortalHeader = () => {
-  const { accountSummary, standingOrder, nextDelivery } = useMenu();
+  const { accountSummary, standingOrder, nextDelivery, faqs } = useMenu();
   const menus = {
     "Account Summary": accountSummary,
     "Standing Order": standingOrder,
-    "Next Delivery": nextDelivery
+    "Next Delivery": nextDelivery,
+    "FAQ": faqs
   }
   const location = useLocation();
   
@@ -26,7 +27,7 @@ const PortalHeader = () => {
     }else if (pathname.includes('delivery')){
       setSubMenu(menus['Next Delivery']);
     }else if (pathname.includes('faq')){
-      setSubMenu(menus['faq']);
+      setSubMenu(menus['FAQ']);
     }else if (pathname.includes('settings')){
       setSubMenu(menus['settins']);
     }

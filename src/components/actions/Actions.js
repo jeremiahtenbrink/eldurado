@@ -9,7 +9,7 @@ const Actions = ({addClass}) => {
         <h3>I would like to:</h3>
       </div>
       <div className="bottom">
-        <h4>Place an equipment work order</h4>
+        <h4><Link to={'/equipment-work-order'} >Place an equipment work order</Link></h4>
         <h4><Link to={"/emergency-order"}>Place an emergency order</Link></h4>
         <h4>View Product listing</h4>
         <h4>Upgrade my equipment</h4>

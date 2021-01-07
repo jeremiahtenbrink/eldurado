@@ -13,7 +13,7 @@ const DropDown = ({name, list, click}) => {
       <div className='dropdown-items'>
         { list.map( item => {
           return <h4 className='accounts-numbers' key={ item }
-                     onClick={ () => click( item ) }>{ item }</h4>;
+                     onClick={ () => click && click( item ) }>{ item }</h4>;
         } ) }
       </div>}
     </div> );
