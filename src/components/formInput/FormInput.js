@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 const FormInput = ({label, name, onChange, value, inputRef, type='text', ...props}) => {
   
   
-  return ( <div className='form-input'>
+  return ( <div className={`form-input ${type}`}>
     {label && <label htmlFor={name}>{label}</label>}
     { type !== "text-area" &&
       <input

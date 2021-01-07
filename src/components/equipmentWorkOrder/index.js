@@ -37,21 +37,22 @@ const EquipmentWorkOrder = ({account}) => {
               value={ form.details }
               label={ "Please tell us what's going on." }
             />
-            <FormInput
-              onChange={handleChange}
-              type={'email'}
-              value={form.email}
-              name={"email"}
-              label={"Email Address"}
-            />
             <div className="row">
               <FormInput
-                style={ { width: "50%" } }
+                onChange={handleChange}
+                type={'email'}
+                value={form.email}
+                name={"email"}
+                label={"Email Address"}
+              />
+              <FormInput
                 onChange={ handleChange }
                 label={ 'Name' }
                 name={ 'name' }
                 value={ form.name }
               />
+            </div>
+            <div className="row">
               <FormInput
                 onChange={ handleChange }
                 name={ 'phone' }

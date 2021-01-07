@@ -38,30 +38,30 @@ const EmergencyOrder = ({account}) => {
               value={ form.details }
               label={ 'Please tell us what you need' }
             />
-            <FormInput
-              onChange={handleChange}
-              type={'email'}
-              value={form.email}
-              name={"email"}
-              label={"Email Address"}
-              style={ { width: "50%" } }
-            />
             <div className="row">
-            <FormInput
-            style={ { width: "60%" } }
-            onChange={ handleChange }
-            label={ 'Name' }
-            name={ 'name' }
-            value={ form.name }
-            />
-            <FormInput
-            onChange={ handleChange }
-            name={ 'phone' }
-            label={ "Phone" }
-            value={ form.phone }
-            />
-            <button type={ 'submit' } onClick={ submit }>Submit</button>
-            <h4 onClick={ () => history.goBack() } className='cancel-button'>Cancel</h4>
+              <FormInput
+                onChange={handleChange}
+                type={'email'}
+                value={form.email}
+                name={"email"}
+                label={"Email Address"}
+              />
+              <FormInput
+                onChange={ handleChange }
+                label={ 'Name' }
+                name={ 'name' }
+                value={ form.name }
+              />
+            </div>
+            <div className="row">
+              <FormInput
+              onChange={ handleChange }
+              name={ 'phone' }
+              label={ "Phone" }
+              value={ form.phone }
+              />
+              <button type={ 'submit' } onClick={ submit }>Submit</button>
+              <h4 onClick={ () => history.goBack() } className='cancel-button'>Cancel</h4>
             </div></> }
         </Form>
       </Modal>
