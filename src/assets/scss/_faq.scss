@@ -4,6 +4,7 @@
 
   & .dropdown-text {
     display: flex;
+    font-weight: bold;
     & .chevron {
       margin-left: 20px;
     }
@@ -12,6 +13,8 @@
   & .dropdown-items {
     margin-top: 20px;
   }
+
+
 
   & p {
     margin-bottom: 20px;

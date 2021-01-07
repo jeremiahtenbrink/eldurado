@@ -11,10 +11,10 @@ const Actions = ({addClass}) => {
       <div className="bottom">
         <h4><Link to={'/equipment-work-order'} >Place an equipment work order</Link></h4>
         <h4><Link to={"/emergency-order"}>Place an emergency order</Link></h4>
-        <h4>View Product listing</h4>
-        <h4>Upgrade my equipment</h4>
-        <h4>Contact us</h4>
-        <h4>Account Settings</h4>
+        <h4><Link to={"/product-listing"}>View Product Listing</Link></h4>
+        <h4><Link to={"/upgrade-my-equipment"}>Upgrade My Equipment</Link></h4>
+        <h4><Link to={"/contact-us"}>Contact Us</Link></h4>
+        <h4><Link to={"/settings"}>Settings</Link></h4>
       </div>
     </div> );
 };

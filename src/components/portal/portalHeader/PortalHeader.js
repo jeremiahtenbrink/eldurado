@@ -41,7 +41,7 @@ const PortalHeader = () => {
   return ( <div className="portal-header">
     <nav>
       <ul className={'portal-nav'}>
-        <MenuItem to={'/summary/overview'} name={'Account Summary'} handleClick={changeSubMenu} />
+        <MenuItem to={'/summary'} name={'Account Summary'} handleClick={changeSubMenu} />
         <MenuItem to={'/order'} name={"Standing Order"} handleClick={changeSubMenu} />
         <MenuItem to={'/delivery'} name={"Next Delivery"} handleClick={changeSubMenu} />
         <MenuItem to={'/faq'} name={"FAQ"} handleClick={changeSubMenu}/>

@@ -24,4 +24,16 @@
       }
     }
   }
+
+  & .selected {
+    text-decoration: underline;
+  }
+
+  & .info {
+    width: 100%;
+    justify-self: flex-start;
+    margin-left: 50px;
+    color: white;
+    align-self: flex-start;
+  }
 }

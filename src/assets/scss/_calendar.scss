@@ -1,0 +1,25 @@
+.calendar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 150px;
+
+  & .month {
+    padding: 5px;
+    background-color: $secondary;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+
+  & .date {
+    padding: 20px;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  & .day {
+    text-align: center;
+  }
+}
